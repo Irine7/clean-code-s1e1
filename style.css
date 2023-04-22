@@ -75,6 +75,10 @@ button:hover {
 
 /* Heading */
 
+h3:first-child {
+  margin-bottom: 10px;
+}
+
 h3,
 label[for="new-task"] {
   color: #333;
