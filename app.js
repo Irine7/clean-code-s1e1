@@ -29,7 +29,7 @@ var createNewTaskElement=function(taskString){
   var deleteButtonImg=document.createElement("img");//delete button image
 
   label.innerText=taskString;
-  label.className='task';
+  label.className="task";
 
   //Each elements, needs appending
   checkBox.type="checkbox";
@@ -38,7 +38,7 @@ var createNewTaskElement=function(taskString){
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
   editButton.className="edit";
   deleteButton.className="delete";
-  deleteButtonImg.src='./remove.svg';
+  deleteButtonImg.src="./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -69,7 +69,7 @@ var editTask=function(){
   console.log("Change 'edit' to 'save'");
 
   var listItem=this.parentNode;
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector("input[type=text]");
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit");
   var containsClass=listItem.classList.contains("editMode");
@@ -84,12 +84,14 @@ var editTask=function(){
     editInput.value=label.innerText;
     editBtn.innerText="Save";
 }
+
   //toggle .editmode on the parent.
   listItem.classList.toggle("editMode");
 };
 
 //Delete task.
 var deleteTask=function(){
+
   console.log("Delete Task...");
   var listItem=this.parentNode;
   var ul=listItem.parentNode;
@@ -100,6 +102,7 @@ var deleteTask=function(){
 
 //Mark task completed
 var taskCompleted=function(){
+
   console.log("Complete Task...");
   //Append the task list item to the #completed-tasks
   var listItem=this.parentNode;
