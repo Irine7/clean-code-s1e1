@@ -3,6 +3,8 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen">
     <title>Todo App</title>
@@ -10,24 +12,24 @@
 
   <body>
 
-    <header class="aaa">
-      <img src="eisenhower-matrix.jpg" alt="Eisenhower matrix">
-        <a class="more_info" href="https://goal-life.com/page/method/matrix-eisenhower">
+    <header class="main-image">
+      <img class="main-image__img" src="eisenhower-matrix.jpg" alt="Eisenhower matrix">
+        <a class="main-image__link" href="https://goal-life.com/page/method/matrix-eisenhower">
           Want more details?
         </a>
     </header>
 
-    <main class="centered-main-page-element">
-      <div id="topSectionForAddingElementToList">
-        <h3>Add Item</h3>
-        <div class="task-row-wrapper">
+    <main class="todo">
+      <div class="todo__wrapper">
+        <h3 class="todo__title">Add Item</h3>
+        <div class="todo__add">
           <input id="new-task" class="task" type="text">
             <button>Add</button>
         </div>
       </div>
-      <h3>Todo</h3>
-        <ul id="incompleteTasks">
-          <li>
+      <h3 class="todo__title">Todo</h3>
+        <ul id="incompleteTasks" class="todo__incompleted-tasks">
+          <li class="todo-list">
             <input type="checkbox">
               <label class="task">Pay Bills</label>
             <input type="text" class="task">
@@ -36,7 +38,7 @@
               <img src="remove.svg" alt="">
             </button>
           </li>
-          <li class="edit-mode">
+          <li class="todo-list todo-list_edit-mode">
             <input type="checkbox">
               <label class="task">Go Shopping</label>
             <input type="text" value="go-shopping" class="task">
@@ -46,9 +48,9 @@
             </button>
           </li>
         </ul>
-      <h3>Completed</h3>
+      <h3 class="todo__title">Completed</h3>
       <ul id="completed-tasks">
-        <li>
+        <li class="todo-list">
           <input type="checkbox" checked>
             <label class="task">See the Doctor</label>
           <input type="text" class="task">

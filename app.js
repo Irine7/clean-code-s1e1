@@ -3,12 +3,14 @@
 
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
-var incompleteTaskHolder = document.getElementById("incompleteTasks");
+var incompleteTaskHolder = document.querySelector("#incompleteTasks");
+// var incompleteTaskHolder = document.querySelectorAll(".todo__incompleted-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
 
 var createNewTaskElement = function(taskString){
   var listItem = document.createElement("li");
+  listItem.classList.add("todo-list");
   var checkBox = document.createElement("input");
   var label = document.createElement("label");
   var editInput = document.createElement("input");
